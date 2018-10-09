@@ -15,7 +15,7 @@ export PATH
 
 vous devez obtenir "X/node-v8.12.0-linux-x64/bin/node ou npm"
 
-* visual studio code : version 1.27.2
+** visual studio code : version 1.27.2
 
 - installer code : cf. https://code.visualstudio.com/Download
 
@@ -27,19 +27,21 @@ vous devez obtenir "X/node-v8.12.0-linux-x64/bin/node ou npm"
 - vérifier l'accès au compilateur en ligne de commande :
   - > tsc --version
 
-* Typescript
-
-(options de compilation)
-
-- fichier de configuration : tsconfig.json
-
 * npm
 
 (processus pour compiler, exécuter, dépendances)
 
 - fichier package.json
 
-* Compilation
+
+* Typescript
+
+(options de compilation)
+
+- fichier de configuration : tsconfig.json
+
+
+** Compilation
 
 - > npm run build
 
@@ -49,7 +51,7 @@ les placer dans build, en respectant la structure des répertoires.
 Remarque : le script build est défini dans la section "scripts" du
 fichier "package.json".
 
-* Exécution
+** Exécution
 
 - > npm run demarrer1
 
@@ -57,3 +59,14 @@ Cette commande a pour effet de lancer l'interprétation d'un fichier js
 en utilisant node. Voir la définition du script dans le fichier
 "package.json". Ces scripts sont à définir à mesure que se développent
 les exécutables.
+
+** Interprétation
+
+Il est possible d'interpréter directement un fichier .ts.
+
+Installer l'interpréteur.
+- > npm install -g ts-node
+
+Lancer l'interpréteur.
+- > ts-node X.ts
+
