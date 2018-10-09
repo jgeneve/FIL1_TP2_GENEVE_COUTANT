@@ -22,7 +22,7 @@ vous devez obtenir "X/node-v8.12.0-linux-x64/bin/node ou npm"
 - configurer code  pour Typescript : cf. https://code.visualstudio.com/docs/languages/typescript
 
 - ouvrir code dans le répertoire du projet (code projet) puis un fichier .ts :
-  la version de typescript 3.0 apparaît en bas à droite.
+  la version de typescript 3.x apparaît en bas à droite.
 
 - vérifier l'accès au compilateur en ligne de commande :
   - > tsc --version
@@ -38,3 +38,22 @@ vous devez obtenir "X/node-v8.12.0-linux-x64/bin/node ou npm"
 (processus pour compiler, exécuter, dépendances)
 
 - fichier package.json
+
+* Compilation
+
+- > npm run build
+
+Cette commande a pour effet de compiler les fichiers source .ts et de
+les placer dans build, en respectant la structure des répertoires.
+
+Remarque : le script build est défini dans la section "scripts" du
+fichier "package.json".
+
+* Exécution
+
+- > npm run demarrer1
+
+Cette commande a pour effet de lancer l'interprétation d'un fichier js
+en utilisant node. Voir la définition du script dans le fichier
+"package.json". Ces scripts sont à définir à mesure que se développent
+les exécutables.

@@ -9,7 +9,8 @@
         "tsc": "tsc",
         "webpack": "webpack",
         "build": "npm run tsc",
-        "demarrer1": "node build/testNaturels"
+        "demarrer1": "node build/v1/testNaturels",
+        "demarrer2": "node build/v2/testNaturels"
     },
     "devDependencies": {},
     "dependencies": {}
