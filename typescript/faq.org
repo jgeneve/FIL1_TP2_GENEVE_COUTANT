@@ -14,4 +14,5 @@ un "string", puis l'opération "join". Voir "NatDecimal" en ts sur le dépôt
 * Méthodes par défaut dans des interfaces en ts ?
 
 Non, mais on peut utiliser une astuce dans un style js : voir
-https://www.typescriptlang.org/docs/handbook/mixins.html .
+https://www.typescriptlang.org/docs/handbook/mixins.html, ou le
+répertoire "typescript/heritageMultiple"
