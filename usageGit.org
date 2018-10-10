@@ -1,7 +1,6 @@
 - HG : Hervé Grall
 - FIL : tout élève en FIL A1
 
-
 * HG Github : dépôt de référence 
 
 - https://github.com/hgrall/modularite19 : dépôt privé
@@ -45,6 +44,11 @@
   > git merge dev
   #+END_SRC
  
+- Pousser les changements vers le dépôt Fork.
+  #+BEGIN_SRC text
+  > git push
+  #+END_SRC
+  
 - branche dev : branche pour les développements en cours, à fusionner
   dans master une fois qu'ils sont terminés
 
@@ -72,6 +76,13 @@
   branche *master* du dépôt de référence, de même que les autres
   branches s'il y en a.
 
+- Fusionner la branche *depotRef/master* avec la branche courante, par
+  exemple *master*.
+  #+BEGIN_SRC text
+  > git checkout master
+  > git merge depotRef/master
+  #+END_SRC
+
 - Voir :
   - https://help.github.com/articles/configuring-a-remote-for-a-fork/
   - https://help.github.com/articles/syncing-a-fork/
@@ -90,11 +101,14 @@
   #+END_SRC
 - Réaliser les modifications et les valider par commit. Pousser la
   branche sur le dépôt Fork.
+  #+BEGIN_SRC text
+  > git push origin modif
+  #+END_SRC
 
 * FIL Github : pull request du dépôt Fork vers le dépôt de référence
 
 - Ouvrir une pull request.
-- Sélectionner la branche de modification.
+- Sélectionner la branche de modification et compléter la requête.
 
 - Voir :
   - https://help.github.com/articles/about-pull-requests/
