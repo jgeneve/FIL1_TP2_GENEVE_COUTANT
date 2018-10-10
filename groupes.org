@@ -40,6 +40,7 @@
 
 - DAILLET Evrard-Nil 8
 - GILLARD Lucille S 8
+- https://github.com/lgillard/modularite19
 
 * Groupe 9
 
