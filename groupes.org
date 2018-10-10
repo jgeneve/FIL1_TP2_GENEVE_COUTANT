@@ -48,7 +48,8 @@
 * Groupe 10
 
 - LE BARS Simon 10
-LE MENN Florian S 10
+- LE MENN Florian S 10
+- https://github.com/SimonLeBars/modularite19.git
 
 * Groupe 11
 
