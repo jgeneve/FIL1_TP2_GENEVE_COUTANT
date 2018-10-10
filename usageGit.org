@@ -20,7 +20,7 @@
 * FIL Local : clone du dépôt Fork
 
 #+BEGIN_SRC text
-> git clone https://github.com/FIL/depotFork.git
+> git clone https://github.com/<username-FIL>/modularite19.git
 #+END_SRC
 
 - branche master : branche de référence à pousser régulièrement vers le
@@ -53,12 +53,12 @@
 - Initialement, déclarer le dépôt de référence comme dépôt distant.
   #+BEGIN_SRC text
   > git remote -v
-    origin  https://github.com/FIL/depotFork.git (fetch)
-    origin  https://github.com/FIL/depotFork.git (push)
+    origin  https://github.com/<username-FIL>/modularite19.git (fetch)
+    origin  https://github.com/<username-FIL>/modularite19.git (push)
   > git remote add depotRef https://github.com/hgrall/modularite19.git
   > git remote -v
-    origin  https://github.com/FIL/depotFork.git (fetch)
-    origin  https://github.com/FIL/depotFork.git (push)
+    origin  https://github.com/<username-FIL>/modularite19.git (fetch)
+    origin  https://github.com/<username-FIL>/modularite19.git (push)
     depotRef  https://github.com/hgrall/modularite19.git (fetch)
     depotRef  https://github.com/hgrall/modularite19.git (push)
   #+END_SRC
