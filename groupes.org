@@ -43,6 +43,7 @@
 
 - HASCOËT Raphaël S 9
 - HERBELIN Thomas 9
+- https://github.com/raphael-hascoet/modularite19
 
 * Groupe 10
 
