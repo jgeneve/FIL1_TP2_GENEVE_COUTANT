@@ -50,5 +50,5 @@ public interface AlgebreNatRecursif extends AlgebreNatRecursifSuccesseur, Algebr
 		if(x.estNul())
 			return false;
 		return this.predecesseur().equals(x.predecesseur());
-	}	
+	} 	
 }
