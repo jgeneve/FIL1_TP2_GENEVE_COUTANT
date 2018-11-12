@@ -9,7 +9,7 @@ public class SuccDecimal extends EtatSucc implements AlgebreNatDecimal {
 	}
 	
 	public Nat creerZero() {
-		return this.creerZero();
+		return this.creerNatAvecValeur(0);
 	}
 	
 	public Nat creerSuccesseur(Nat predecesseur) {

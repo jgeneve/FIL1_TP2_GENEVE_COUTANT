@@ -11,7 +11,7 @@ public class ZeroDecimal extends EtatZero implements AlgebreNatDecimal {
 	}
 	
 	public Nat creerSuccesseur(Nat predecesseur) {
-		throw new UnsupportedOperationException("Pas de prédécesseur.");
+		return this.creerNatAvecValeur(predecesseur.val() + 1);
 	}
 	
 	public String toString() {

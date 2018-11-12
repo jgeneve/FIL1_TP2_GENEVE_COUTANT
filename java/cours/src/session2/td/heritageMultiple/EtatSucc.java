@@ -11,7 +11,7 @@ public abstract class EtatSucc implements NatInductif {
 	}
 	
 	public int val() {
-		return this.predecesseur.val();
+		return 1 + this.predecesseur.val();
 	}
 	
 	public boolean estNul() {

@@ -1,32 +1,28 @@
-package session2.td.heritageMultiple;
+package session2.td.agregation;
 
 import session1.td.FabriqueNaturels;
-import session1.td.Nat;
 
 public class Test {
 
 	public static void main(String[] args) {
-		FabriqueNaturels<Nat> fab = new NatDecimal("1");
-		test(fab); 
-		fab = new NatDecimalParInt("1");
+		FabriqueNaturels<Nat> fab = new NatCalculantAvecDesNombresDecimaux(new NombreDecimal("0"));
 		test(fab);
-		fab = new NatDecimalRecursif("1");
+		fab = new NatCalculantAvecDesNombresDecimaux(new IntPositif(0));
 		test(fab);
-		
-		fab = new NatParInt(1);
-		test(fab); 
-		fab = new NatParIntDecimal(1);
+		fab = new NatCalculantAvecDesNombresDecimaux(new ZeroInductif());
 		test(fab);
-		fab = new NatParIntRecursif(1);
+		fab = new NatCalculantAvecDesInts(new NombreDecimal("0"));
 		test(fab);
-		
-		Nat nat = new ZeroDecimal();
-		fab = new SuccDecimal(nat);
-		test(fab); 
-		fab = new SuccParInt(nat);
+		fab = new NatCalculantAvecDesInts(new IntPositif(0));
 		test(fab);
-		fab = new SuccRecursif(nat);
-		test(fab);		
+		fab = new NatCalculantAvecDesInts(new ZeroInductif());
+		test(fab);
+		fab = new NatCalculantRecursivement(new NombreDecimal("0"));
+		test(fab);
+		fab = new NatCalculantRecursivement(new IntPositif(0));
+		test(fab);
+		fab = new NatCalculantRecursivement(new ZeroInductif());
+		test(fab);
 	}
 
 	private static void test(FabriqueNaturels<Nat> fab) {

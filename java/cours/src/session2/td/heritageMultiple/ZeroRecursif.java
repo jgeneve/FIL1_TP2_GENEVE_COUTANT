@@ -11,7 +11,7 @@ public class ZeroRecursif extends EtatZero implements AlgebreNatRecursif {
 	}
 	
 	public Nat creerSuccesseur(Nat predecesseur) {
-		throw new UnsupportedOperationException("Pas de prédécesseur.");
+		return this.creerNatAvecValeur(predecesseur.val() + 1);
 	}
 	
 	public String toString() {

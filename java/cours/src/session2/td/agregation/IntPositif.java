@@ -1,8 +1,6 @@
-package session2.td.heritageMultiple;
+package session2.td.agregation;
 
-import session1.td.Nat;
-
-public abstract class IntPositif implements Nat {
+public class IntPositif implements EtatNaturelPur {
 	
 	private int val;
 
@@ -12,18 +10,6 @@ public abstract class IntPositif implements Nat {
 		this.val = val;
 	}	
 	
-	public Nat creerZero() {
-		return this.creerNatAvecRepresentation("0");
-	}
-	
-	public Nat creerSuccesseur(Nat predecesseur) {
-		return this.creerNatAvecValeur(predecesseur.val() + 1);
-	}
-	
-	public Nat creerNatAvecRepresentation(String repDecimal) {
-		return this.creerNatAvecValeur(Integer.parseInt(repDecimal));
-	}
-	
 	public int val() {
 		return this.val;
 	}
@@ -32,7 +18,7 @@ public abstract class IntPositif implements Nat {
 		return this.val() == 0;
 	}
 	
-	public Nat predecesseur() {
+	public EtatNaturelPur predecesseur() {
 		if(this.estNul())
 			throw new UnsupportedOperationException("Pas de prédécesseur.");
 		return this.creerNatAvecValeur(this.val() - 1);
@@ -44,5 +30,21 @@ public abstract class IntPositif implements Nat {
 	
 	public int taille() {
 		return (this.val() < 10) ? 1 : 1 + (this.creerNatAvecValeur(this.val() / 10)).taille();
+	}
+	
+	@Override
+	public EtatNaturelPur creerNatAvecValeur(int val) {
+		return new IntPositif(val);
+	}
+	
+	public String toString() {
+		return String.valueOf(this.val());
+	}
+	
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Nat))
+			return false;
+		Nat x = (Nat)obj;
+		return this.val() == x.val();
 	}
 }
