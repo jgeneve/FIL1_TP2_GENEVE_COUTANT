@@ -1,14 +1,17 @@
-package session1.td;
+package session2.td.heritageMultiple;
+
+import session1.td.FabriqueNaturels;
+import session1.td.Nat;
 
 public class Test {
 
 	public static void main(String[] args) {
-		test(new NatParInt(1));
-		test(new Zero());
-		test(Succ.FAB);
-		test(ZeroRec.FAB);
-		test(SuccRec.FAB);
-		test(NatDecimal.FAB);
+		FabriqueNaturels<Nat> fab = new NatDecimal("1");
+		test(fab); 
+		fab = new NatDecimalParInt("1");
+		test(fab);
+		fab = new NatDecimalRecursif("1");
+		test(fab);
 	}
 
 	private static void test(FabriqueNaturels<Nat> fab) {
