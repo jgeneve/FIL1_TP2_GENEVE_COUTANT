@@ -11,7 +11,7 @@ public class ZeroRecursif extends EtatZero implements AlgebreNatRecursif {
 	}
 	
 	public Nat creerSuccesseur(Nat predecesseur) {
-		return this.creerNatAvecValeur(predecesseur.val() + 1);
+		return new SuccRecursif(predecesseur);
 	}
 	
 	public String toString() {
