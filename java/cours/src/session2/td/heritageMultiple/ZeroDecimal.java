@@ -11,7 +11,7 @@ public class ZeroDecimal extends EtatZero implements AlgebreNatDecimal {
 	}
 	
 	public Nat creerSuccesseur(Nat predecesseur) {
-		return this.creerNatAvecValeur(predecesseur.val() + 1);
+		return new SuccDecimal(predecesseur);
 	}
 	
 	public String toString() {

@@ -26,6 +26,4 @@ public class SuccDecimal extends EtatSucc implements AlgebreNatDecimal {
 		Nat x = (Nat) obj;
 		return this.val() == x.val();
 	}
-	
-	
 }

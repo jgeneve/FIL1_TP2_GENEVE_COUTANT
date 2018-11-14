@@ -11,7 +11,7 @@ public class ZeroParInt extends EtatZero implements AlgebreNatParInt {
 	}
 	
 	public Nat creerSuccesseur(Nat predecesseur) {
-		return this.creerNatAvecValeur(predecesseur.val() + 1);
+		return new SuccParInt(predecesseur);
 	}
 	
 	public String toString() {

@@ -26,6 +26,4 @@ public class SuccParInt extends EtatSucc implements AlgebreNatParInt {
 		Nat x = (Nat) obj;
 		return this.val() == x.val();
 	}
-	
-	
 }

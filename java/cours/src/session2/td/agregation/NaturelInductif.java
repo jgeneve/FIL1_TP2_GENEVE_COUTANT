@@ -7,7 +7,7 @@ public interface NaturelInductif extends EtatNaturelPur {
 	}
 	
 	default public EtatNaturelPur creerSuccesseur(EtatNaturelPur val) {
-		return this.creerNatAvecValeur(val.val() - 1);
+		return new SuccInductif(val);
 	}
 	
 	default public EtatNaturelPur creerNatAvecValeur(int val) {

@@ -9,7 +9,11 @@ public class NatParInt extends IntPositif implements AlgebreNatParInt {
 	}
 	
 	public Nat creerNatAvecValeur(int val) {
-		return new NatParInt(val);
+		if (val == 0) {
+			return this.creerZero();
+		} else {
+			return new NatParInt(val);
+		}
 	}
 	
 	public String toString() {
