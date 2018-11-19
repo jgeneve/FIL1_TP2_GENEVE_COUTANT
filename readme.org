@@ -1,0 +1,62 @@
+* Typescript - Compilation et exécution
+
+#+BEGIN_SRC text
+> npm run build
+#+END_SRC
+
+Le code Javascript obtenu se retrouve dans le répertoire "build".
+
+#+BEGIN_SRC text
+> npm run appli
+#+END_SRC
+
+Le script "appli" doit être défini dans le fichier "package.json". Voir
+"td1" comme exemple. 
+
+* Typescript - Interprétation directe
+
+- Installer "ts-node".
+
+- Interpréter un fichier "ts".
+
+  #+BEGIN_SRC text
+  > ts-node session1/td/testNaturels.ts
+  #+END_SRC
+
+* Code source
+
+** Général
+
+*** Java
+
+- hiérarchie : la hiérarchie de structures algébriques
+
+*** Typescript
+
+- bibiliothèque
+  - assembleur de string : équivalent en Typescript de StringBuilder
+  - propriétés : des interfaces exprimant des propriétés très communes
+
+- héritage multiple : astuce pour exprimer l'héritage multiple
+  d'interfaces concrètes (dans un style javascript)
+
+- structures algébriques : la hiérarchie d'interfaces
+
+** Session 1
+
+*** Java
+
+- démo 1 : interfaces et classes (exemple des entiers naturels)
+- démo 2 : données mutables contre données immutables - String vs
+  StringBuilder
+- exercices : généralisation, liaison tardive
+- mutabilité : comparaison de deux implémentations, mutables et
+  immutables
+- td : une correction du td1
+
+*** Typescript
+
+- démo 1 : interfaces et classes (exemple des entiers naturels)
+- td : une correction du td1
+- principe de substitution : quelques exceptions
+

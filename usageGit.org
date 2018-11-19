@@ -1,0 +1,117 @@
+- HG : Hervé Grall
+- FIL : tout élève en FIL A1
+
+* HG Github : dépôt de référence 
+
+- https://github.com/hgrall/modularite19 : dépôt privé
+- inscription requise comme collaborateur
+
+- branche master : branche de référence (unique)
+
+* FIL Github : Fork du dépôt de référence
+
+- fork : fonctionnalité de Github permettant de créer un nouveau dépôt sur
+  github par clonage d'un dépôt existant 
+
+- branche master : branche de référence qui sera utilisée pour les
+  corrections 
+
+* FIL Local : clone du dépôt Fork
+
+#+BEGIN_SRC text
+> git clone https://github.com/<username-FIL>/modularite19.git
+#+END_SRC
+
+- branche master : branche de référence à pousser régulièrement vers le
+  dépôt Fork  
+
+* FIL Local : développement dans le clone du dépôt Fork
+
+- Créer une branche pour tout nouveau développement.
+  #+BEGIN_SRC text
+  > git branch dev
+  #+END_SRC
+
+- Se placer sur cette branche pour développer.
+  #+BEGIN_SRC text
+  > git checkout dev
+  #+END_SRC
+
+- Après validation (*commit*) des développements, fusionner avec la
+  branche master.
+  #+BEGIN_SRC text
+  > git checkout master
+  > git merge dev
+  #+END_SRC
+ 
+- Pousser les changements vers le dépôt Fork.
+  #+BEGIN_SRC text
+  > git push
+  #+END_SRC
+  
+- branche dev : branche pour les développements en cours, à fusionner
+  dans master une fois qu'ils sont terminés
+
+* FIL Local : synchronisation du clone avec le dépôt de référence
+
+- Initialement, déclarer le dépôt de référence comme dépôt distant.
+  #+BEGIN_SRC text
+  > git remote -v
+    origin  https://github.com/<username-FIL>/modularite19.git (fetch)
+    origin  https://github.com/<username-FIL>/modularite19.git (push)
+  > git remote add depotRef https://github.com/hgrall/modularite19.git
+  > git remote -v
+    origin  https://github.com/<username-FIL>/modularite19.git (fetch)
+    origin  https://github.com/<username-FIL>/modularite19.git (push)
+    depotRef  https://github.com/hgrall/modularite19.git (fetch)
+    depotRef  https://github.com/hgrall/modularite19.git (push)
+  #+END_SRC
+  
+- Lors de chaque synchronisation, aller chercher sur le dépôt de
+  référence les mises-à-jour.
+  #+BEGIN_SRC text
+  > git fetch depotRef
+  #+END_SRC 
+  La branche locale *depotRef/master* est désormais synchronisée avec la
+  branche *master* du dépôt de référence, de même que les autres
+  branches s'il y en a.
+
+- Fusionner la branche *depotRef/master* avec la branche courante, par
+  exemple *master*.
+  #+BEGIN_SRC text
+  > git checkout master
+  > git merge depotRef/master
+  #+END_SRC
+
+- Voir :
+  - https://help.github.com/articles/configuring-a-remote-for-a-fork/
+  - https://help.github.com/articles/syncing-a-fork/
+
+* FIL Local : modification de la copie du dépôt de référence
+
+- Se déplacer dans la branche *depotRef/master*, après validation par
+  commit des modifications dans la branche courante.
+  #+BEGIN_SRC text
+  > git checkout depotRef/master
+  #+END_SRC 
+- Créer une nouvelle branche pour la modification et s'y déplacer.
+  #+BEGIN_SRC text
+  > git branch modif
+  > git checkout modif
+  #+END_SRC
+- Réaliser les modifications et les valider par commit. Pousser la
+  branche sur le dépôt Fork.
+  #+BEGIN_SRC text
+  > git push origin modif
+  #+END_SRC
+
+* FIL Github : pull request du dépôt Fork vers le dépôt de référence
+
+- Ouvrir une pull request.
+- Sélectionner la branche de modification et compléter la requête.
+
+- Voir :
+  - https://help.github.com/articles/about-pull-requests/
+  - https://help.github.com/articles/creating-a-pull-request-from-a-fork/
+
+
